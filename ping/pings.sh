@@ -18,9 +18,9 @@ do
   #因为只PING一次，丢包数为0则表示成功，否则失败
   if [ $p -eq 0 ]
     then
-            echo "${datetimevar}|${i}|true" >> ./ipcheckdown.txt
+            echo "${datetimevar}|${i}|true" >> ./pt_result.txt
     else
-            echo "${datetimevar}|${i}|fail" >> ./ipcheckdown.txt
+            echo "${datetimevar}|${i}|fail" >> ./pt_result.txt
   fi
 done
-# 结果： 查看ipcheckdown.txt文件，记录了所有IP的测试结果，包括时间、IP地址、是否成功
+# 结果： 查看pt_result.txt文件，记录了所有IP的测试结果，包括时间、IP地址、是否成功
